@@ -20,7 +20,8 @@ function Hero() {
           </div>
 
           <h1 className="text-3xl md:text-5xl bold-text">
-            Hi, I'm Anagha&nbsp;👋
+            Hi, I'm Anagha&nbsp;&#128075;
+            {/* 👋 */}
             {/* <span className="material-symbols-rounded ml-3 emoji transform scale-150">
 waving_hand
 </span> */}

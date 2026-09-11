@@ -5,9 +5,9 @@ function Footer() {
         <div id="about-me" className="w-full md:w-1/2  about-me m-2 md:mb-0">
           <h2 className="text-3xl">About Me</h2>
           <p className="text-sm  text-gray">
-            I am a software developer with a passion for creating innovative and
-            efficient solutions. I enjoy working on challenging projects and
-            continuously learning new technologies.
+I'm a software developer with a Masters degree in Physics from IIT Bombay and an early professional experience in software development. I have a passion for coding and software development, and I particularly enjoy combining science and other fields with software development when needed. I enjoy solving problems, learning new technologies, and building practical, user-focused applications.
+<a href="cv.pdf" className="text-primary"> Download CV</a>
+
           </p>
         </div>
         <div className="hidden md:block w-[1px] h-[40vh] border-l-1 border-gray-600 opacity-30"></div>

@@ -106,10 +106,11 @@
   border:var(--green) 1px solid;
 }
 
-a.nav-link, a.nav-link:visited, .nav-icon{
+a.nav-link,a.project-link, a.nav-link:visited, a.project-link:visited, .nav-icon{
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
   color:var(--text);}
-a.nav-link:hover, .nav-icon:hover{
+a.nav-link:hover, .nav-icon:hover,a.project-link:hover{
   color:var(--green);
 }
 

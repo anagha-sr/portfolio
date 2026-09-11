@@ -56,5 +56,5 @@
 }
 /* Make last card different from first */
 .embla__slide:last-child .project-card {
-  background-color: color-mix(in srgb, var(--secondary) 30%, transparent);
+  background-color: color-mix(in srgb, var(--tertiary) 30%, transparent);
 }
