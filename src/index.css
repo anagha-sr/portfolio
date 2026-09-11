@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import "tailwindcss";
+
+ /* Font weight: Use a value from 300 to 800 */
+
+ html { 
+  scroll-behavior: smooth; 
+  overscroll-behavior-y: none
+}
+:root {
+  --background:#F9F8F2 ;
+  --surface:#F0F1F1;
+  --primary:#4b6fe6;
+  --text: #052776;
+  --text-gray:rgb(92, 99, 115);
+  --tertiary:#9790dd;
+  --green:#469F92;
+  --yellow:#e89d4c;
+  --mixColor:var(--text);
+  --footer:#E0DEEC;
+   /* Common colors */
+  --white: #F0F1F1;
+}
+
+[data-theme="dark"] {
+  --background: #0B101A;
+  --surface: #111533;
+  --primary: #2B54D6;
+  --text: #AFC6FB;
+  --tertiary:#7c4dc7;
+  --green:#5B9F7B;
+  --yellow:#a59247;
+  --footer:#1D1635;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--footer);
+  color: var(--text);
+}
+
+.thin-text {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.normal-text,body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.bold-text {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 650;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' -25,
+  'opsz' 48
+}
+.text-primary{
+  color: var(--primary);
+}
+.text-gray{
+  color: var(--text-gray);
+}
+.text-secondary{
+  color: var(--tertiary);
+}

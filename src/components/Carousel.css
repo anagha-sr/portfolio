@@ -1,0 +1,60 @@
+.carousel-projects .embla {
+  --slide-size: 100%;
+  --slide-size-md-up: 30%;
+  --slide-spacing: 30px;
+}
+.carousel-certifications .embla {
+  --slide-size: 100%;
+  --slide-size-md-up: 100%;
+  --slide-spacing: 30px;
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1); /* Renders -10px */
+}
+
+.embla__slide {
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+}
+/* .embla__slide:last-child {
+  margin-right: 20px;
+} */
+
+@media (min-width: 768px) {
+  .embla__slide {
+    flex: 0 0 var(--slide-size-md-up);
+  }
+}
+.carousel-projects .embla__prev,
+.carousel-projects .embla__next {
+  background-color: color-mix(in srgb, var(--surface) 75%, transparent);
+  cursor: pointer;
+}
+.carousel-certifications .embla__prev,
+.carousel-certifications .embla__next {
+  background-color: transparent;
+  cursor: pointer;
+}
+.embla__slide:nth-child(3n+1) .project-card {
+  background-color: color-mix(in srgb, var(--green) 30%, transparent);
+}
+
+.embla__slide:nth-child(3n+2) .project-card {
+  background-color: color-mix(in srgb, var(--yellow) 30%, transparent);
+}
+
+.embla__slide:nth-child(3n) .project-card {
+  background-color: color-mix(in srgb, var(--primary) 30%, transparent);
+}
+/* Make last card different from first */
+.embla__slide:last-child .project-card {
+  background-color: color-mix(in srgb, var(--secondary) 30%, transparent);
+}
