@@ -90,13 +90,17 @@
 }
 .btn{
   padding: 10px 20px;
-  border: var(--primary) 1px solid;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 .btn-primary{
   background-color: var(--primary);
   color: var(--white);
+}
+.btn-gray{
+  color: var(--text-gray);
+  padding: 5px 10px;
+  border:var(--text-gray) 1px solid;
 }
 
 .btn:hover{

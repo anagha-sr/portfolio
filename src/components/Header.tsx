@@ -78,7 +78,7 @@ function Header() {
             </a>
           ))}
           <a
-            href="https://drive.google.com/file/d/1wCf4cB2OqP5L3bWvXhJbX0y0v8f9w0Pp/view?usp=share_link"
+            href="/resume.pdf"
             target="_blank"
             className="nav-link text-sm md:text-base"
           >
@@ -122,6 +122,13 @@ function Header() {
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </a>
               ))}
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                className="nav-link text-sm md:text-base"
+              >
+                Resume
+              </a>
             </div>
           </div>
         )}
