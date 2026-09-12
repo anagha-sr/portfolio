@@ -1,7 +1,7 @@
 import useEmblaCarousel from 'embla-carousel-react'
 import './Carousel.css'
 import { useEffect, useState } from 'react'
-import AutoScroll from 'embla-carousel-auto-scroll'
+import AutoPlay from 'embla-carousel-autoplay'
 
 
 type CarouselProps = {
@@ -15,20 +15,20 @@ function Carousel({children, type: carouselType}: CarouselProps) {
     '(min-width: 768px)': { align: 'start' }
   } },
 [
-    AutoScroll({active: carouselType === "certifications", playOnInit:true, stopOnMouseEnter: true, speed: 1 })
+    AutoPlay({active: carouselType === "certifications", playOnInit:true, stopOnMouseEnter: true })
   ])
   const [prevButtonDisabled, setPrevButtonDisabled] = useState(true)
   const [nextButtonDisabled, setNextButtonDisabled] = useState(true)
    const scrollPrev = () => {
-    emblaApi?.plugins().autoScroll?.stop()
+    emblaApi?.plugins().autoplay?.stop()
     return emblaApi?.scrollPrev()
   }
   const scrollNext = () => {
-    emblaApi?.plugins().autoScroll?.stop()
+    emblaApi?.plugins().autoplay?.stop()
     return emblaApi?.scrollNext()
   }
   const handleMouseLeave = () => {
-    emblaApi?.plugins().autoScroll?.play()
+    emblaApi?.plugins().autoplay?.play()
   }
 
   const toggleButtonsDisabled = (emblaApi: any) => {
