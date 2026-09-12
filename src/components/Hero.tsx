@@ -33,12 +33,16 @@ waving_hand
           </p>
 
           <div className="flex flex-col items-center sm:flex-row gap-4 mt-4">
-            <button className="btn btn-primary mt-4 text-sm rounded-full">
-              View My Projects
-            </button>
-            <button className="btn btn-secondary mt-4 text-sm rounded-full">
-              Get in Touch
-            </button>
+            <a href="#projects">
+              <button className="btn btn-primary mt-4 text-sm rounded-full">
+                View My Projects
+              </button>
+            </a>
+            <a href="#contact">
+              <button className="btn btn-secondary mt-4 text-sm rounded-full">
+                Get in Touch
+              </button>
+            </a>
           </div>
         </div>
       </div>
