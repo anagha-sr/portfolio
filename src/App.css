@@ -92,9 +92,15 @@
   padding: 10px 20px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+    border:var(--primary) 1px solid;
+
 }
 .btn-primary{
   background-color: var(--primary);
+  color: var(--white);
+}
+.btn-secondary{
+  background-color: transparent;
   color: var(--white);
 }
 .btn-gray{
