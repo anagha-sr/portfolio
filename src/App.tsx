@@ -5,6 +5,8 @@ import Header from './components/Header.tsx'
 import Hero from './components/Hero.tsx'
 import Projects from './components/Projects.tsx'
 import SkillSection from './components/SkillsSection.tsx'
+import { Analytics } from '@vercel/analytics/next';
+
 function App() {
 
   return (
@@ -16,6 +18,7 @@ function App() {
         <SkillSection />
         </main>
         <Footer />
+        <Analytics />
     </>
   )
 }
