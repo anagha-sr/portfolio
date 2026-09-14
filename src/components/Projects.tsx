@@ -1,7 +1,7 @@
-import gausian from "../assets/projects/gaussian_beam.png";
-import noteshare from "../assets/projects/noteshare.png";
-import calculator from "../assets/projects/calculator.png";
-import catchgame from "../assets/projects/catchgame.png";
+import gausian from "../assets/projects/gaussian_beam.webp";
+import noteshare from "../assets/projects/noteshare.webp";
+import calculator from "../assets/projects/calculator.webp";
+import catchgame from "../assets/projects/catchgame.webp";
 import ProjectCard from "./ProjectCard.tsx";
 import Carousel from "./Carousel.tsx";
 function Projects() {

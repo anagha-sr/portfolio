@@ -1,12 +1,12 @@
 import Carousel from "./Carousel";
-import introSoftwareEng from "../assets/certifications/introSoftwareEng.png";
-import introBackEnd from"../assets/certifications/introBackEnd.png";
-import jsCert from "../assets/certifications/js.png";
-import javaCert from "../assets/certifications/java.png";
-import genAIPromptBasics from "../assets/certifications/genAIPromptBasics.png";
-import genAIIntro from "../assets/certifications/genAIIntro.png";
-import reactCert from "../assets/certifications/react.png";
-import sqlCert from "../assets/certifications/sql.png";
+import introSoftwareEng from "../assets/certifications/introSoftwareEng.webp";
+import introBackEnd from"../assets/certifications/introBackEnd.webp";
+import jsCert from "../assets/certifications/js.webp";
+import javaCert from "../assets/certifications/java.webp";
+import genAIPromptBasics from "../assets/certifications/genAIPromptBasics.webp";
+import genAIIntro from "../assets/certifications/genAIIntro.webp";
+import reactCert from "../assets/certifications/react.webp";
+import sqlCert from "../assets/certifications/sql.webp";
 
 type Certification = {
   name: string;

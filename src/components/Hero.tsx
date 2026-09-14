@@ -1,8 +1,16 @@
+import { useState } from "react";
 import laptop from "../assets/laptop.webp";
 function Hero() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   return (
-    <section id="home" className="hero flex flex-col md:flex-row items-center justify-center ">
-      <div className="hero-1 w-full  md:w-3/5 flex justify-center items-center mx-2">
+    <section id="home"
+    className={`hero flex flex-col md:flex-row items-center justify-center  transition-opacity duration-700 ${
+  isLoaded ? "opacity-100" : "opacity-0"
+}`}
+    >
+      <div className="hero-1 w-full  md:w-3/5 flex justify-center items-center mx-2"
+      >
         {/* <div id="photo-container" className="w-2/5">
             <img
               src={photo}
@@ -47,7 +55,8 @@ waving_hand
         </div>
       </div>
       <div className="hero-2 w-full  md:w-2/5 text-center md:text-left max-w-[500px]">
-        <img src={laptop} alt="Laptop Image" className="m-auto" />
+        <img src={laptop} onLoad={() => setIsLoaded(true)}
+ alt="Laptop Image" className="m-auto" />
       </div>
     </section>
   );
