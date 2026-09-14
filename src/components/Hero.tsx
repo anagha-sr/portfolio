@@ -1,4 +1,4 @@
-import laptop from "../assets/laptop.png";
+import laptop from "../assets/laptop.webp";
 function Hero() {
   return (
     <section id="home" className="hero flex flex-col md:flex-row items-center justify-center ">
