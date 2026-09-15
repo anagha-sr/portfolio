@@ -1,5 +1,5 @@
 import { useState } from "react";
-import laptop from "../assets/laptop.webp";
+import laptop from "../assets/laptop.png";
 function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
 
