@@ -9,7 +9,7 @@ function Hero() {
   isLoaded ? "opacity-100" : "opacity-0"
 }`}
     >
-      <div className="hero-1 w-full  md:w-3/5 flex justify-center items-center mx-2"
+      <div className="hero-1 w-full  md:w-1/2 flex justify-center items-center mx-2"
       >
         {/* <div id="photo-container" className="w-2/5">
             <img
@@ -54,7 +54,7 @@ waving_hand
           </div>
         </div>
       </div>
-      <div className="hero-2 w-full  md:w-2/5 text-center md:text-left max-w-[500px]">
+      <div className="hero-2 w-full  md:w-1/2 text-center md:text-left max-w-[500px]">
         <img src={laptop} onLoad={() => setIsLoaded(true)}
  alt="Laptop Image" className="m-auto" />
       </div>
