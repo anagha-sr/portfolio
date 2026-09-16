@@ -1,16 +1,17 @@
 import { useState } from "react";
 import laptop from "../assets/laptop.webp";
+import AnimatedBackground from "./FloatingParticles/AnimatedBackground";
 function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <section id="home"
-    className={`hero flex flex-col md:flex-row items-center justify-center  transition-opacity duration-700 ${
-  isLoaded ? "opacity-100" : "opacity-0"
-}`}
+    <section
+      id="home"
+      className={`hero overflow-hidden flex flex-col md:flex-row items-center justify-center  transition-opacity duration-700 ${
+        isLoaded ? "opacity-100" : "opacity-0"
+      }`}
     >
-      <div className="hero-1 w-full  md:w-1/2 flex justify-center items-center mx-2"
-      >
+      <div className="hero-1 w-full  md:w-1/2 flex justify-center items-center mx-2">
         {/* <div id="photo-container" className="w-2/5">
             <img
               src={photo}
@@ -35,7 +36,9 @@ waving_hand
 </span> */}
           </h1>
 
-<p className="w-full max-w-[500px] mt-2 text-sm md:text-base normal-text">            I am a software developer with a passion for creating innovative and
+          <p className="w-full max-w-[500px] mt-2 text-sm md:text-base normal-text">
+            {" "}
+            I am a software developer with a passion for creating innovative and
             efficient solutions. I enjoy working on challenging projects and
             continuously learning new technologies.
           </p>
@@ -54,9 +57,15 @@ waving_hand
           </div>
         </div>
       </div>
-      <div className="hero-2 w-full  md:w-1/2 text-center md:text-left max-w-[500px]">
-        <img src={laptop} onLoad={() => setIsLoaded(true)}
- alt="Laptop Image" className="m-auto" />
+      <div className="hero-2 z-10 relative w-full  md:w-1/2 text-center md:text-left max-w-[500px]">
+        <AnimatedBackground />
+
+        <img
+          src={laptop}
+          onLoad={() => setIsLoaded(true)}
+          alt="Laptop Image"
+          className="m-auto"
+        />
       </div>
     </section>
   );

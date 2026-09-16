@@ -101,7 +101,7 @@
 }
 .btn-secondary{
   background-color: transparent;
-  color: var(--white);
+  color: var(--text);
 }
 .btn-gray{
   color: var(--text-gray);

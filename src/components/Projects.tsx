@@ -46,7 +46,7 @@ function Projects() {
         
     ];
   return (
-    <section id="projects" className="projects-section flex flex-col  ">
+    <section id="projects" className="projects-section flex flex-col justify-center  ">
      <div className="projects-container  p-4 md:p-8 md:m-8">
             <div className="projects-header mx-4 mb-4 md:mx-5 md:mb-5 ">
                <h2 className="text-2xl md:text-3xl">Featured Projects</h2>

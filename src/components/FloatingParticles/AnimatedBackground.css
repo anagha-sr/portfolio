@@ -1,0 +1,449 @@
+/* ========================================================= ANIMATED BACKGROUND ========================================================= */
+.animated-background {
+  z-index: -2;
+  position: absolute;
+  inset: -15%;
+  width: 130%;
+  height: 130%;
+  overflow: hidden;
+  pointer-events: none;
+  transform-origin: center;
+  animation: background-rotate 140s linear infinite;
+}
+@keyframes background-rotate {
+  to {
+    transform: rotate(-360deg);
+  }
+} /* ========================================================= ORBITS ========================================================= */
+.background-orbits {
+z-index: -1;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.orbit {
+  fill: none;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation-fill-mode: both;
+} /* Yellow */
+.orbit-yellow {
+  stroke: color-mix(in srgb, var(--yellow) 22%, transparent);
+  animation:
+    orbit-clockwise 100s linear infinite,
+    orbit-glow 13s ease-in-out infinite;
+} /* Purple */
+.orbit-tertiary {
+  stroke: color-mix(in srgb, var(--tertiary) 22%, transparent);
+  animation:
+    orbit-anticlockwise 120s linear infinite,
+    orbit-glow 17s ease-in-out infinite -5s;
+} /* Green */
+.orbit-green {
+  stroke: color-mix(in srgb, var(--green) 22%, transparent);
+  animation:
+    orbit-anticlockwise 140s linear infinite,
+    orbit-glow 21s ease-in-out infinite -9s;
+} /* ========================================================= ORBIT ROTATION ========================================================= */
+@keyframes orbit-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes orbit-anticlockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+} /* ========================================================= ORBIT GLOW ========================================================= */
+@keyframes orbit-glow {
+  0%,
+  100% {
+    opacity: 0.2;
+    filter: blur(0px);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(1.5px);
+  }
+}
+
+ /* ========================================================= CODE SYMBOLS ========================================================= */
+.code-symbol {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.02em; /* Smaller and quieter than before. */
+  font-size: clamp(1.05rem, 1.8vw, 1.7rem);
+  font-weight: 300;
+  line-height: 1;
+  opacity: 0.11;
+  user-select: none;
+  animation:
+    symbol-float 18s ease-in-out infinite,
+    symbol-blur 13s ease-in-out infinite;
+} /* Left */
+.code-symbol-left {
+  top: 20%;
+  left: 8%;
+  color: var(--primary);
+  animation-delay:
+    -2s,
+    -4s;
+} /* Right */
+.code-symbol-right {
+  top: 24%;
+  right: 8%;
+  color: var(--tertiary);
+  animation-delay:
+    -8s,
+    -9s;
+} /* Bottom */
+.code-symbol-bottom {
+  right: 20%;
+  bottom: 12%;
+  color: var(--green);
+  font-size: clamp(0.95rem, 1.5vw, 1.45rem);
+  animation-delay:
+    -13s,
+    -6s;
+} /* ========================================================= SYMBOL FLOAT ========================================================= */
+@keyframes symbol-float {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate3d(5%, -5%, 0);
+  }
+  50% {
+    transform: translate3d(15%, -1%, 0);
+  }
+  75% {
+    transform: translate3d(20%, 30%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+} /* ========================================================= SYMBOL BLUR ========================================================= */
+@keyframes symbol-blur {
+  0%,
+  100% {
+    opacity: 0.08;
+    filter: blur(0px);
+  }
+  50% {
+    opacity: 0.18;
+    filter: blur(1.5px);
+  }
+} /* ========================================================= GEOMETRIC SHAPES ========================================================= */
+.background-shapes {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.shape {
+  vector-effect: non-scaling-stroke;
+  animation:
+    shape-drift 20s ease-in-out infinite,
+    shape-blur 15s ease-in-out infinite;
+}
+.shape-square {
+  fill: none;
+  stroke-width: 1;
+}
+.shape-square-1 {
+  stroke: var(--primary);
+  opacity: 0.2;
+  animation-delay:
+    -2s,
+    -5s;
+}
+.shape-square-2 {
+  stroke: var(--tertiary);
+  opacity: 0.18;
+  animation-delay:
+    -8s,
+    -10s;
+}
+.shape-square-3 {
+  stroke: var(--yellow);
+  opacity: 0.18;
+  animation-delay:
+    -14s,
+    -3s;
+}
+
+ /* ========================================================= SHAPE DRIFT ========================================================= */
+@keyframes shape-drift {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(4px, -5px) rotate(3deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+} /* ========================================================= SHAPE BLUR ========================================================= */
+@keyframes shape-blur {
+  0%,
+  100% {
+    filter: blur(0px);
+  }
+  50% {
+    filter: blur(1px);
+  }
+} /* ========================================================= PARTICLES ========================================================= */
+.particles {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+.particle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  animation:
+    particle-drift 15s ease-in-out infinite,
+    particle-glow 6s ease-in-out infinite,
+    particle-blur 10s ease-in-out infinite;
+} /* ========================================================= PARTICLE POSITIONS + COLORS ========================================================= */
+.particle-1 {
+  top: 15%;
+  left: 25%;
+  background: var(--green);
+  color: var(--green);
+  animation-delay:
+    0s,
+    -1s,
+    -3s;
+}
+.particle-2 {
+  top: 30%;
+  left: 48%;
+  background: var(--primary);
+  color: var(--primary);
+  animation-delay:
+    -2s,
+    -3s,
+    -7s;
+}
+.particle-3 {
+  top: 12%;
+  right: 27%;
+  background: var(--yellow);
+  color: var(--yellow);
+  animation-delay:
+    -5s,
+    -5s,
+    -1s;
+}
+.particle-4 {
+  top: 48%;
+  right: 12%;
+  background: var(--green);
+  color: var(--green);
+  animation-delay:
+    -7s,
+    -1s,
+    -8s;
+}
+.particle-5 {
+  bottom: 22%;
+  left: 14%;
+  background: var(--tertiary);
+  color: var(--tertiary);
+  animation-delay:
+    -9s,
+    -4s,
+    -5s;
+}
+.particle-6 {
+  bottom: 15%;
+  left: 42%;
+  background: var(--primary);
+  color: var(--primary);
+  animation-delay:
+    -11s,
+    -2s,
+    -9s;
+}
+.particle-7 {
+  bottom: 30%;
+  right: 30%;
+  background: var(--yellow);
+  color: var(--yellow);
+  animation-delay:
+    -13s,
+    -5s,
+    -2s;
+}
+.particle-8 {
+  top: 55%;
+  left: 6%;
+  background: var(--green);
+  color: var(--green);
+  animation-delay:
+    -15s,
+    -7s,
+    -6s;
+} /* ========================================================= PARTICLE DRIFT ========================================================= */
+@keyframes particle-drift {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(4px, -6px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+} /* ========================================================= PARTICLE GLOW ========================================================= */
+@keyframes particle-glow {
+  0%,
+  100% {
+    opacity: 0.25;
+    filter: drop-shadow(0 0 1px currentColor);
+  }
+  50% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 6px currentColor);
+  }
+} /* ========================================================= PARTICLE BLUR ========================================================= */
+@keyframes particle-blur {
+  0%,
+  100% {
+    filter: blur(0px);
+  }
+  50% {
+    filter: blur(1px);
+  }
+} /* ========================================================= NETWORK ========================================================= */
+.background-network {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+} /* Network lines */
+.network-line {
+  fill: none;
+  stroke: color-mix(in srgb, var(--primary) 55%, transparent);
+  stroke-width: 1.2;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 5 9;
+  animation:
+    dash-flow 5s linear infinite,
+    network-line-blur 14s ease-in-out infinite;
+}
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+@keyframes network-line-blur {
+  0%,
+  100% {
+    opacity: 0.35;
+    filter: blur(0px);
+  }
+  50% {
+    opacity: 0.65;
+    filter: blur(0.7px);
+  }
+} /* ========================================================= NETWORK NODES ========================================================= */
+.network-node {
+  stroke: var(--background);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  animation:
+    network-pulse 7s ease-in-out infinite,
+    network-blur 11s ease-in-out infinite;
+}
+.network-node-1,
+.network-node-3 {
+  fill: var(--green);
+}
+.network-node-2 {
+  fill: var(--primary);
+}
+.network-node-4 {
+  fill: var(--yellow);
+} /* Different pulse timing */
+.network-node-1 {
+  animation-delay:
+    0s,
+    -2s;
+}
+.network-node-2 {
+  animation-delay:
+    -1.5s,
+    -5s;
+}
+.network-node-3 {
+  animation-delay:
+    -3s,
+    -8s;
+}
+.network-node-4 {
+  animation-delay:
+    -4.5s,
+    -3s;
+} /* ========================================================= NETWORK PULSE ========================================================= */
+@keyframes network-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    filter: blur(0px);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(2px);}
+
+} /* ========================================================= MOBILE ========================================================= */
+@media (max-width: 767px) {
+  .code-symbol {
+    font-size: 1.15rem;
+    opacity: 0.08;
+  }
+  .code-symbol-left {
+    left: 4%;
+  }
+  .code-symbol-right {
+    right: 4%;
+  }
+  .code-symbol-bottom {
+    display: none;
+  }
+  .background-orbits {
+    opacity: 0.65;
+  }
+  .background-network {
+    opacity: 0.8;
+  }
+  .shape-square-1,
+  .shape-square-3,
+  .shape-triangle {
+    opacity: 0.06;
+  }
+  .particle {
+    width: 1px;
+    height: 1px;
+  }
+} /* ========================================================= ACCESSIBILITY ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  .animated-background *,
+  .animated-background {
+    animation: none !important;
+  }
+}
