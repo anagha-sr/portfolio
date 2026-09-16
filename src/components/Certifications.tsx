@@ -7,6 +7,7 @@ import genAIPromptBasics from "../assets/certifications/genAIPromptBasics.webp";
 import genAIIntro from "../assets/certifications/genAIIntro.webp";
 import reactCert from "../assets/certifications/react.webp";
 import sqlCert from "../assets/certifications/sql.webp";
+import oopJava from "../assets/certifications/oopJava.webp";
 
 type Certification = {
   name: string;
@@ -29,6 +30,11 @@ const certifications = [
     name: "JavaScript Deep Dive",
     image:jsCert,
     link: "https://coursera.org/share/f90940604e61a42d0f49f4cac038000d",
+  },
+  {
+    name: "Object Oriented Programming in Java",
+    image: oopJava,
+    link: "https://coursera.org/share/3af628508baadee926901409f487a890",
   },
   {
     name: "Java Programming for Beginners",
