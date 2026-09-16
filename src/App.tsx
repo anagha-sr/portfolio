@@ -1,6 +1,5 @@
 
 import './App.css'
-import AnimatedBackground from './components/FloatingParticles/AnimatedBackground.tsx'
 import Footer from './components/Footer.tsx'
 import Header from './components/Header.tsx'
 import Hero from './components/Hero.tsx'
