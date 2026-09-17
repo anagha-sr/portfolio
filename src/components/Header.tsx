@@ -61,7 +61,7 @@ function Header() {
           >
             <button
               title="Switch to light mode"
-              className="nav-icon cursor-pointer material-symbols-outlined"
+              className="nav-icon cursor-pointer material-symbols-outlined mr-4"
             >
               {isDarkMode ? "light_mode" : "dark_mode"}
             </button>
@@ -87,7 +87,7 @@ function Header() {
         </div>
         <button
             onClick={toggleTheme}
-            className="md:hidden md:hidden nav-icon cursor-pointer ml-auto"
+            className="md:hidden md:hidden nav-icon cursor-pointer ml-auto mr-4"
             aria-label="Toggle theme"
           >
               <span className="material-symbols-outlined px-2 pt-1">

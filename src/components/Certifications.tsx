@@ -79,7 +79,7 @@ function Certifications() {
             >
               <img
                 src={certification.image}
-                alt={certification.name}
+                alt={"Certificate for " + certification.name}
                 className="w-full h-auto"
               />
             </a>

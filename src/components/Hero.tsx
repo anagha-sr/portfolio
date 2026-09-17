@@ -43,14 +43,14 @@ waving_hand
             continuously learning new technologies.
           </p>
 
-          <div className="flex flex-col items-center sm:flex-row gap-4 mt-4">
-            <a href="#projects">
-              <button className="btn btn-primary mt-4 text-sm rounded-full">
+          <div className="flex flex-col items-center sm:flex-row gap-6 mt-4">
+            <a href="#projects" >
+              <button className="btn btn-primary mt-6 text-sm rounded-full">
                 View My Projects
               </button>
             </a>
             <a href="#contact">
-              <button className="btn btn-secondary mt-4 text-sm rounded-full">
+              <button className="btn btn-secondary mt-6 text-sm rounded-full">
                 Get in Touch
               </button>
             </a>
@@ -63,7 +63,7 @@ waving_hand
         <img
           src={laptop}
           onLoad={() => setIsLoaded(true)}
-          alt="Laptop Image"
+          alt="Laptop displaying code surrounded by books, a plant, coffee, and a notebook"
           className="m-auto"
         />
       </div>

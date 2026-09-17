@@ -29,7 +29,7 @@ function projectCard({
             <img
               className={`transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"}`}
               src={image}
-              alt={title}
+              alt={"A screen shot of " + title}
               onLoad={() => setIsLoaded(true)}
             />
             {!isLoaded && (
@@ -39,8 +39,8 @@ function projectCard({
             )}
           </div>
         </a>
-        <h4>{title}</h4>
-        <p className="my-1 text-sm opacity-80">{description}</p>
+        <h3>{title}</h3>
+        <p className="my-1 text-sm">{description}</p>
         <div className="project-skills flex flex-wrap gap-2 mt-2">
           {skills.map((skill, index) => (
             <span

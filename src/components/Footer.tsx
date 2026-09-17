@@ -4,13 +4,13 @@ function Footer() {
       <div className="about-me-contact-container text-center mx-12 my-auto flex flex-col md:flex-row justify-evenly items-center px-4">
         <div  className="w-full md:w-1/2  about-me m-2 md:mb-0">
           <h2 className="text-3xl thin-text">About Me</h2>
-          <p className="text-sm text-gray">
+          <p className="text-sm">
 I'm a software developer with a Masters degree in Physics from IIT Bombay and an early professional experience in software development. I have a passion for coding and software development, and I particularly enjoy combining science and other fields with software development when needed. I enjoy solving problems, learning new technologies, and building practical, user-focused applications.
 
           </p>
-          <a href="/resume.pdf" target="_blank" className="text-sm text-blue hover:underline"><button className="btn btn-gray rounded-full my-2">Download Resume</button></a>
+          <a href="/resume.pdf" target="_blank" className="text-sm cursor-pointer"><button className="btn btn-secondary rounded-full my-2">Download Resume</button></a>
         </div>
-        <div className="hidden md:block w-[1px] h-[40vh] border-l-1 border-gray-600 opacity-30"></div>
+        <div aria-hidden="true" className="hidden md:block w-[1px] h-[40vh] border-l-1 border-gray-600 opacity-30"></div>
         <hr className="block md:hidden border-gray-600 mb-2 opacity-30 w-full " />
 
         <div id="contact" className="contact-me mx-4 px-4 w-full md:w-1/2">
@@ -21,6 +21,7 @@ I'm a software developer with a Masters degree in Physics from IIT Bombay and an
               href="https://www.linkedin.com/in/anagha-surendranath-35b1b6191/"
               target="_blank"
               rel="noopener noreferrer"
+              title="Linkedin"
             >
               <i className="fab fa-linkedin mr-2 fa-4x "></i>
             </a>
@@ -29,6 +30,7 @@ I'm a software developer with a Masters degree in Physics from IIT Bombay and an
               href="https://github.com/anagha-sr/"
               target="_blank"
               rel="noopener noreferrer"
+              title="Github"
             >
               <i className="fab fa-github mr-2 fa-4x"></i>
             </a>
@@ -36,7 +38,7 @@ I'm a software developer with a Masters degree in Physics from IIT Bombay and an
         </div>
       </div>
       <div className="mt-auto ">
-        <hr className="border-gray-600 mb-2 opacity-30 mx-16 " />
+        <hr className="border-gray-600 mb-2 text-gray mx-16 " />
         <p className="text-gray text-sm px-4 text-center">
           &copy; {new Date().getFullYear()} Anagha. Made with React and
           TypeScript.
