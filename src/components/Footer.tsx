@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <section id="about" className="footer flex text-white py-4 flex flex-col ">
+    <footer id="about" className="footer flex text-white py-4 flex flex-col ">
       <div className="about-me-contact-container text-center mx-12 my-auto flex flex-col md:flex-row justify-evenly items-center px-4">
         <div  className="w-full md:w-1/2  about-me m-2 md:mb-0">
           <h2 className="text-3xl thin-text">About Me</h2>
@@ -44,7 +44,7 @@ I'm a software developer with a Masters degree in Physics from IIT Bombay and an
           TypeScript.
         </p>
       </div>
-    </section>
+    </footer>
   );
 }
 

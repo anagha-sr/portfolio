@@ -30,7 +30,7 @@ function Header() {
       { threshold: 0.5 },
     );
 
-    document.querySelectorAll("section[id]").forEach((section) => {
+    document.querySelectorAll("section[id],footer[id]").forEach((section) => {
       observer.observe(section);
     });
 
@@ -48,7 +48,7 @@ function Header() {
   };
   return (
     <>
-      <div className="header-spacer h-[48px] md:h-[65px]"></div>
+      <div aria-hidden="true" className="header-spacer h-[48px] md:h-[65px]"></div>
       <header className="header fixed  sticky-top top-0 w-full flex justify-between items-center z-50 ">
         <h1 className="text-xl md:text-2xl thin-text px-4 ">
           Anagha&nbsp;S<span className="hidden md:inline">urendranath</span>
@@ -89,6 +89,9 @@ function Header() {
             onClick={toggleTheme}
             className="md:hidden md:hidden nav-icon cursor-pointer ml-auto mr-4"
             aria-label="Toggle theme"
+            role="switch" 
+            aria-checked={isDarkMode}
+            tabIndex={0}
           >
               <span className="material-symbols-outlined px-2 pt-1">
               {isDarkMode ? "light_mode" : "dark_mode"}</span>
